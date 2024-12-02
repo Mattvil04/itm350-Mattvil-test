@@ -6,7 +6,7 @@ on:
     types:
       - closed
 env:
-  REPO_NAME: mattvil04/itm-350-mattvil-test-bb
+  REPO_NAME: mattvil04/itm-350-mattvil-test-bb:1.0
 
 jobs:
   if_merged:
