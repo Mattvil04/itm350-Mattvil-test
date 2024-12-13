@@ -4,6 +4,7 @@ on:
       - main
     types:
       - closed
+
 env:
   REPO_NAME: mattvil04/itm-350-mattvil-test-bb:1.0
 
@@ -33,8 +34,8 @@ jobs:
         with:
           images: ${{ env.REPO_NAME }}
           tags: |
-            type=sha  
-            
+            type=sha
+
       - name: List directory structure
         run: |
           ls -R ./bb/node-bulletin-board/bulletin-board-app
@@ -45,6 +46,5 @@ jobs:
           context: ./bb/node-bulletin-board/bulletin-board-app
           file: ./bb/node-bulletin-board/bulletin-board-app/Dockerfile
           push: true
-          tag_with_sha: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ env.REPO_NAME }}:sha-${{ github.sha }}
           labels: ${{ steps.meta.outputs.labels }}
