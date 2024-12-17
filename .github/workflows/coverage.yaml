@@ -21,6 +21,9 @@ jobs:
         run: |
           npm install
 
+      - name: Fix permissions for Jest (if needed)
+        run: chmod +x ./node_modules/.bin/jest
+
       - name: Run tests with coverage
         run: |
           npm test -- --coverage
