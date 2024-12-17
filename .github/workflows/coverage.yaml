@@ -2,7 +2,7 @@ name: Code Coverage Check
 
 on:
   pull_request:
-    branches: [main]  # Se ejecuta en PR dirigidos a main
+    branches: [main]  
 
 jobs:
   coverage:
