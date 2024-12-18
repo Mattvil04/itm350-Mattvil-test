@@ -1,0 +1,10 @@
+ami                         = "ami-0e252be8f4dfa2c0d"
+cluster_name		        = "ecs-cluster-bulletinboard"
+container_image             = "mattvil04/itm-350-mattvil-test-bb:sha-9a6f914"
+container_port              = 8080
+instance_name_prefix	    = "cit262-node"
+instance_type               = "t2.micro"
+lab_role                    = "arn:aws:iam::857182196251:role/LabRole"
+region                      = "us-west-2"
+vpc_cidr		            = "10.0.0.0/16"
+vpc_prefix		            = "ecs-vpc"
