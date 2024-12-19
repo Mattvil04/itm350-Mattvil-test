@@ -37,3 +37,7 @@ variable "vpc_cidr" {
 variable "vpc_prefix" {
   type = string
 }
+variable "public_key" {
+  description = "The public key to associate with the key pair"
+  type        = string
+}
