@@ -198,9 +198,7 @@ resource "aws_lb" "ecs_alb" {
   subnets            = [aws_subnet.subnet-pub1.id, aws_subnet.subnet-pub2.id]
 
   enable_deletion_protection = false
-  idle_timeout {
-    seconds = 60
-  }
+  idle_timeout = 60
 
   tags = {
     Name = "ecs-alb"
